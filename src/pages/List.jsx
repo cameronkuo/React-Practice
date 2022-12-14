@@ -28,32 +28,29 @@ const Menus1 = () => {
 	};
 
 	return (
-		<>
-			<Tabs
-				items={[
-					{
-						path: "/list/child1",
-						Icon: AppleOutlined,
-					},
-					{
-						path: "/list/child2",
-						Icon: AndroidOutlined,
-					},
-				].map((Item, i) => {
-					return {
-						label: (
-							<span>
-								<Item.Icon />
-								Tab {i + 1}
-							</span>
-						),
-						key: Item.path,
-						children: () => <div />,
-					};
-				})}
-				onChange={onChange}
-			/>
-		</>
+		<Tabs
+			items={[
+				{
+					path: "/list/child1",
+					Icon: AppleOutlined,
+				},
+				{
+					path: "/list/child2",
+					Icon: AndroidOutlined,
+				},
+			].map((Item, i) => {
+				return {
+					label: (
+						<span>
+							<Item.Icon />
+							Tab {i + 1}
+						</span>
+					),
+					key: Item.path,
+				};
+			})}
+			onChange={onChange}
+		/>
 	);
 };
 
